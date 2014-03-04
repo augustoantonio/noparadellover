@@ -27,20 +27,7 @@ class model_general_request
 		else 
 			$request['action'] = 'index';
 		
-		if (isset($requestd[3]) && $requestd[3]!=="")
-			{
-				$request['permissions'] = $requestd[3];
-			
-			}	
-		else	
-				$request['permissions'] = "0";
-			
-// echo 'request';
-// echo '<pre>';
-// print_r($request);
-// echo '</pre>';
-// die;
-// 			
+		
 		return $request;
 	}
 }

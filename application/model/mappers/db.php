@@ -7,6 +7,8 @@ class model_mappers_db extends model_db
 	
 	public function __construct($config)
 	{
+		echo 'pasa primero por aqui';
+die;
 		$this->config = $config;
 		$this->link = $this->connectDB();
 		$this->selectDB();

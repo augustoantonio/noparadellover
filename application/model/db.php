@@ -11,15 +11,11 @@ class model_db
 	
 	protected function connectDB()
 	{
-		
 		// Conectar a la DBMS
-	
 		$link=mysqli_connect($this->config['host'],
 				$this->config['user'],
 				$this->config['password']
 		);
-// echo 'model_db connectDB';
-// die;
 		return $link;
 	}
 	

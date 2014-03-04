@@ -17,10 +17,7 @@ class bootstrap
 		$this->initRegister();
 		$this->initDbR();
 		$this->initDbW();
-// echo '<pre>';
-// print_r($_SESSION);
-// echo '</pre>';
-// 		
+
 		$this->initAcl();
 		
 		$controller = 'controllers_'.$this->request['controller'];
@@ -45,9 +42,18 @@ class bootstrap
 		if(isset($_SESSION['iduser']))
 		{
 			
-			$acl = new model_acl($this->config['database']);
-// echo 'aquii';
+// echo 'initacl';			
+// echo '<pre>';
+// print_r($publicControllers);
+// echo '</pre>';
+// echo '<pre>';
+// print_r($this->config['database']);
+// echo '</pre>';
+// echo '<pre>';
+// print_r($_SESSION['iduser']);
+// echo '</pre>';
 // die;		
+			$acl = new model_acl($this->config['database']);
 			$data = $acl->getAcl($_SESSION['iduser'], $this->request);
 			if(!isset($data))
 				header('Location: /author/login');

@@ -16,8 +16,6 @@
 // echo "<br/>";
 // $seed='1234';
 // echo md5(session_id().$seed);
-
-
 /**
  * <form method="post" action="procesar.php">
 <input type="hidden" name="token" value="<?php echo $token; ?>" />
